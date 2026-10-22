@@ -109,6 +109,8 @@ GameObject:
   m_Component:
   - component: {fileID: 450808}
   - component: {fileID: 9503158}
+  - component: {fileID: -5630283314397687742}
+  - component: {fileID: 1723274223176533415}
   m_Layer: 0
   m_Name: Animal_Chick
   m_TagString: Untagged
@@ -126,8 +128,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 408332}
   - {fileID: 499388}
@@ -155,6 +157,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-5630283314397687742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b46240e08d0d43ef9262c203c09d280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EatFood
+--- !u!114 &1723274223176533415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c58baafac4ee4b269fc7a2f6dcfb40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalMove
 --- !u!1 &113672
 GameObject:
   m_ObjectHideFlags: 0
