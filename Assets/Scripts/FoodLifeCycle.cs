@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class FoodLifeCycle : MonoBehaviour
@@ -7,12 +6,6 @@ public class FoodLifeCycle : MonoBehaviour
 
 private void Start()
 {
-    StartCoroutine(DeleteAfterLifeDuration());
-}
-
-private IEnumerator DeleteAfterLifeDuration()
-{
-    yield return new WaitForSeconds(lifeDuration);
-    Destroy(gameObject);
+    Destroy(gameObject, lifeDuration);
 }
 }

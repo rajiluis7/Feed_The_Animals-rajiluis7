@@ -1469,6 +1469,7 @@ GameObject:
   - component: {fileID: 9509470}
   - component: {fileID: 1763729438252169484}
   - component: {fileID: -4208689251238889671}
+  - component: {fileID: 7452551191928828725}
   m_Layer: 0
   m_Name: Animal_Horse_Brown
   m_TagString: Untagged
@@ -1531,6 +1532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b46240e08d0d43ef9262c203c09d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EatFood
+  FoodItEats: Food_Banana_01
 --- !u!114 &-4208689251238889671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1543,6 +1545,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c58baafac4ee4b269fc7a2f6dcfb40a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimalMove
+  animalSpeed: 1
+  outOfScene: 0
+--- !u!65 &7452551191928828725
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151702}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1, y: 0.4, z: 0.3}
+  m_Center: {x: 0, y: 0.2, z: 0.025}
 --- !u!1 &156498
 GameObject:
   m_ObjectHideFlags: 0

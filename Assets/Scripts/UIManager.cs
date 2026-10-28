@@ -10,7 +10,7 @@ public static UIManager Instance { get; private set; }
 private Label animalsRemainingUI;
 private Label scoreUI;
 private int animalsRemaining;
-private int score;
+private int score = 0;
 
 private void Awake()
 {
@@ -39,7 +39,7 @@ private void Start()
 
     if (scoreUI != null)
     {
-        scoreUI.text = "Score: " + score.ToString();
+        scoreUI.text = "Score: " + score;
     }
 
     if (SpawnManager.Instance != null)
@@ -60,7 +60,7 @@ public void ScoreUpdate(int scoreUpdate)
 
     if (scoreUI != null)
     {
-        scoreUI.text = "Score: " + score.ToString();
+        scoreUI.text = "Score: " + score;
     }
 }
 
@@ -73,8 +73,13 @@ public void AnimalsRemainingUpdate()
 
         if (animalsRemainingUI != null)
         {
-            animalsRemainingUI.text = "Animals Remaining: " + animalsRemaining.ToString();
+            animalsRemainingUI.text = "Animals Remaining: " + animalsRemaining;
         }
+
+        if (animalsRemaining <= 0 && SpawnManager.Instance != null)
+            {
+                SpawnManager.Instance.GameOver();
+            }
     }
 }
 }

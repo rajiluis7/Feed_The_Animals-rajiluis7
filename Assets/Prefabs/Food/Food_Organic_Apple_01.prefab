@@ -153,3 +153,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae71161309204483fae92f55b0bbe5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodLifeCycle
+  lifeDuration: 1.725

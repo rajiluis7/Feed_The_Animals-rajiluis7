@@ -1,16 +1,19 @@
+using Mono.Cecil.Cil;
+using Unity.CodeEditor;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
 public static SpawnManager Instance { get; private set; }
 [SerializeField] private GameObject[] animalPrefab;
-[SerializeField] private int animalsToFeed;
-[SerializeField] private float spawnStart;
-[SerializeField] private float startFrequency;
-[SerializeField] private float spawnZPosition;
-[SerializeField] private float centerToEdge;
+[SerializeField] private int animalsToFeed = 4;
+[SerializeField] private float spawnStart = 2f;
+[SerializeField] private float startFrequency =1.5f;
+[SerializeField] private float spawnZPosition = 20f;
+[SerializeField] private float centerToEdge = 20f;
+[SerializeField] private int animalsSpawned =0;
 private float timer;
-public bool isGameOver{get; private set;}
+public bool isGameOver = false;
 
 private void Awake()
 {
@@ -25,20 +28,12 @@ private void Awake()
 
 private void Start()
 {
-    spawnZPosition = 20f;
-    centerToEdge = 15f;
     timer = startFrequency;
-    isGameOver = false;
 }
 
 private void Update()
 {
-    HandleSpawning();
-}
-
-private void HandleSpawning()
-{
-    if (isGameOver)
+     if (isGameOver)
     {
         return;
     }
@@ -54,12 +49,10 @@ private void HandleSpawning()
 
 private void SpawnAnimal()
 {
-    if (animalPrefab == null || animalPrefab.Length == 0)
+   
+    if (animalsSpawned < animalsToFeed)
     {
-        return;
-    }
-    if(animalsToFeed > 0)
-    {
+        animalsSpawned++;
         int randomPrefabIndex = Random.Range(0, animalPrefab.Length);
         float randomXPosition = Random.Range(-centerToEdge, centerToEdge);
         Vector3 spawnPosition = new Vector3(randomXPosition, 0f, spawnZPosition);
@@ -67,21 +60,17 @@ private void SpawnAnimal()
         Instantiate(animalPrefab[randomPrefabIndex], spawnPosition, animalPrefab[randomPrefabIndex].transform.rotation);
         animalsToFeed--;
     }
-    else
-    {
-        GameOver();
-    }
 }
 
-private void GameOver()
+public void GameOver()
 {
-    Debug.Log("Game Over");
     isGameOver = true;
 }
 
 // Called by: UIManager
 public int GetNumberOfAnimalsToFeed()
 {
-    return animalsToFeed;
+   return animalsToFeed;
+
 }
 }

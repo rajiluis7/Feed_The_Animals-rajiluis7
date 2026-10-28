@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class EatFood : MonoBehaviour
 {
-[SerializeField] private string FoodItEats;
+[SerializeField] public string FoodItEats;
 private bool IsHungry = true;
 
+[Serializefield] private 
 private void OnCollisionEnter(Collision collision)
 {
     if (!IsHungry)

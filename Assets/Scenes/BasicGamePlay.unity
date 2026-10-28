@@ -193,6 +193,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 25803284}
+    - targetCorrespondingSourceObject: {fileID: 100046, guid: f8abbdd178867d2419ba9feb6ff2cba0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 25803287}
   m_SourcePrefab: {fileID: 100100000, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
 --- !u!1 &25803278 stripped
 GameObject:
@@ -457,6 +461,18 @@ MonoBehaviour:
   - {fileID: 100000, guid: 10d25933610222845ad3760a855829c4, type: 3}
   - {fileID: 101770, guid: c13306d1f1d9a1a489199ef77f9dba89, type: 3}
   - {fileID: 1180137445707430, guid: 84cd279dfc9ea0a4b8564030182915fa, type: 3}
+--- !u!114 &25803287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25803278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733e167734b2746a69d284aef067ed84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Test_GameManager
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,7 +1082,6 @@ GameObject:
   - component: {fileID: 1008103890}
   - component: {fileID: 1008103889}
   - component: {fileID: 1008103888}
-  - component: {fileID: 1008103887}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1074,18 +1089,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1008103887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1008103886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 733e167734b2746a69d284aef067ed84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Test_GameManager
 --- !u!114 &1008103888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,6 +1123,8 @@ MonoBehaviour:
   startFrequency: 1.5
   spawnZPosition: 15
   centerToEdge: 22
+  AnimalsSpawned: 0
+  isGameOver: 0
 --- !u!4 &1008103890
 Transform:
   m_ObjectHideFlags: 0

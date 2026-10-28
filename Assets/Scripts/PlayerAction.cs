@@ -62,7 +62,7 @@ public class PlayerAction : MonoBehaviour
         if (foodItems != null && index < foodItems.Length && foodItems[index] != null)
         {
             GameObject food = Instantiate(foodItems[index], transform.position +Vector3.up, transform.rotation);
-
+            
             if (audioSource != null && audioSource.clip != null)
             {
                 audioSource.PlayOneShot(audioSource.clip);
